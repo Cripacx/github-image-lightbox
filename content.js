@@ -59,7 +59,7 @@
     overlay.className = "ghil-overlay";
     overlay.setAttribute("role", "dialog");
     overlay.setAttribute("aria-modal", "true");
-    overlay.setAttribute("aria-label", img.alt || "Bildansicht");
+    overlay.setAttribute("aria-label", img.alt || "Image viewer");
 
     const view = document.createElement("img");
     view.className = "ghil-image";
@@ -78,9 +78,9 @@
     original.target = "_blank";
     original.rel = "noopener noreferrer";
     original.textContent = "↗";
-    original.title = "Original in neuem Tab öffnen";
+    original.title = "Open original in new tab";
     original.setAttribute("aria-label", original.title);
-    const closeButton = button("✕", "Schließen (Esc)");
+    const closeButton = button("✕", "Close (Esc)");
     closeButton.addEventListener("click", close);
     toolbar.append(original, closeButton);
 
