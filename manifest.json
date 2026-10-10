@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "GitHub Image Lightbox",
+  "version": "1.0.0",
+  "description": "Öffnet Bilder in GitHub-Issues, PRs und Kommentaren in einer Lightbox auf der Seite statt in einem neuen Tab.",
+  "content_scripts": [
+    {
+      "matches": ["https://github.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

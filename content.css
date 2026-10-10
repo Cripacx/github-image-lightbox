@@ -1,0 +1,59 @@
+.ghil-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2147483647;
+  display: flex;
+  overflow: auto;
+  padding: 48px 16px 16px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.ghil-overlay .ghil-image {
+  /* margin:auto centers while still allowing scrolling when zoomed beyond the viewport. */
+  margin: auto;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  background: transparent;
+  cursor: zoom-in;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.ghil-overlay .ghil-image.ghil-zoomed {
+  max-width: none;
+  max-height: none;
+  cursor: zoom-out;
+}
+
+.ghil-toolbar {
+  position: fixed;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 8px;
+}
+
+.ghil-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.15);
+  color: #fff !important;
+  font: 18px/1 system-ui, sans-serif;
+  text-decoration: none !important;
+  cursor: pointer;
+}
+
+.ghil-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ghil-button:focus-visible {
+  outline: 2px solid #4493f8;
+  outline-offset: 2px;
+}
